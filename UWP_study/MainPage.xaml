@@ -8,6 +8,43 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView Name="mainview">
+            <SplitView.Content>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="我的测试程序" FontSize="30"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="3*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="用户名" Margin="20,10"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="密码" Margin="20,10"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" PlaceholderText="请输入用户名" Margin="20,10"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" PlaceholderText="请输入密码" Margin="20,10"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Content="登录" HorizontalAlignment="Center"/>
+                        <Button Content="清空" Grid.Column="1" HorizontalAlignment="Center"/>
+                    </Grid>
+                    <Button HorizontalAlignment="Center" Content="菜单" Margin="0,50,0,0" Click="Button_Click"/>
+                </StackPanel>
+            </SplitView.Content>
+            <SplitView.Pane>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="条目1" FontSize="30"/>
+                    <TextBlock Text="条目2" FontSize="30"/>
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
 
     </Grid>
 </Page>

@@ -26,5 +26,10 @@ namespace UWP_study
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            mainview.IsPaneOpen = !mainview.IsPaneOpen;
+        }
     }
 }
