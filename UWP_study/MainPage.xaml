@@ -10,38 +10,46 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <SplitView Name="mainview">
             <SplitView.Content>
-                <StackPanel Orientation="Vertical">
-                    <TextBlock Text="我的测试程序" FontSize="30"/>
-                    <Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="测试程序" TextAlignment="Center" FontSize="40" Grid.ColumnSpan="3"/>
+                    <TextBlock Text="测试输入1:" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10"/>
+                    <TextBox Name="tbox1" PlaceholderText="测试" Grid.Row="1" Grid.Column="1" Margin="0,10"/>
+                    <TextBlock Text="测试输入1:" Grid.Row="2" Margin="0,10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox Name="tbox2"  PlaceholderText="测试" Grid.Row="2" Grid.Column="1" Margin="0,10"/>
+                    <TextBlock Text="测试输入1:" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox Name="tbox3" PlaceholderText="测试" Grid.Row="3" Grid.Column="1" Margin="0,10"/>
+
+                    <Grid Grid.Row="4" Grid.ColumnSpan="3">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="3*"/>
                         </Grid.RowDefinitions>
-
-                        <TextBlock Grid.Row="0" Grid.Column="0" Text="用户名" Margin="20,10"/>
-                        <TextBlock Grid.Row="1" Grid.Column="0" Text="密码" Margin="20,10"/>
-                        <TextBox Grid.Row="0" Grid.Column="1" PlaceholderText="请输入用户名" Margin="20,10"/>
-                        <TextBox Grid.Row="1" Grid.Column="1" PlaceholderText="请输入密码" Margin="20,10"/>
+                        <Button Content="确定" HorizontalAlignment="Center" Click="Button_Click_2"/>
+                        <Button Content="清空" Grid.Column="1" HorizontalAlignment="Center" Click="Button_Click_1"/>
+                        <Button Content="菜单" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Click="Button_Click"/>
                     </Grid>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="1*" />
-                        </Grid.ColumnDefinitions>
-                        <Button Content="登录" HorizontalAlignment="Center"/>
-                        <Button Content="清空" Grid.Column="1" HorizontalAlignment="Center"/>
-                    </Grid>
-                    <Button HorizontalAlignment="Center" Content="菜单" Margin="0,50,0,0" Click="Button_Click"/>
-                </StackPanel>
+                </Grid>
             </SplitView.Content>
             <SplitView.Pane>
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="条目1" FontSize="30"/>
-                    <TextBlock Text="条目2" FontSize="30"/>
+                    <Button Content="弹框测试" FontSize="30" Click="Button_Click_3"/>
+                    <Button Content="退出" FontSize="30" Click="Button_Click_4"/>
                 </StackPanel>
             </SplitView.Pane>
         </SplitView>

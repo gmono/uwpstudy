@@ -31,5 +31,48 @@ namespace UWP_study
         {
             mainview.IsPaneOpen = !mainview.IsPaneOpen;
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            tbox1.Text = tbox2.Text = tbox3.Text = "";
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                tbox3.Text = (int.Parse(tbox1.Text) + int.Parse(tbox2.Text)).ToString();
+            }
+            catch(Exception)
+            {
+                tbox3.Text = "输入错误";
+            }
+        }
+
+        private async void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            var dlg = new Windows.UI.Popups.MessageDialog("测试消息弹框!!")
+            {
+                Title = "测试标题"
+            };
+            Windows.UI.Popups.UICommandInvokedHandler fun = async uicmd =>
+             {
+                 var tdlg = new Windows.UI.Popups.MessageDialog("")
+                 {
+                     Title = "说明",
+                     Content = $"您点击了{uicmd.Label}"
+                 };
+                 tdlg.Commands.Add(new Windows.UI.Popups.UICommand("确定"));
+                 await tdlg.ShowAsync();
+             };
+            dlg.Commands.Add(new Windows.UI.Popups.UICommand("确定",fun));
+            dlg.Commands.Add(new Windows.UI.Popups.UICommand("取消", fun));
+            await dlg.ShowAsync();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            App.Current.Exit();
+        }
     }
 }
