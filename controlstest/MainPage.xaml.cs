@@ -125,11 +125,21 @@ namespace controlstest
             }
         }
 
-        private async void ToggleSwitch_Tapped(object sender, TappedRoutedEventArgs e)
+
+
+        private async void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
         {
             var twobj = sender as ToggleSwitch;
             var dlg = new MessageDialog(twobj.IsOn.ToString(), "提示。。");
             dlg.Commands.Add(new UICommand("确定"));
+            await dlg.ShowAsync();
+        }
+
+        private async void TimePicker_TimeChanged(object sender, TimePickerValueChangedEventArgs e)
+        {
+            TimePicker tpk = sender as TimePicker;
+            var dlg = new MessageDialog(tpk.Time.ToString(), "选择时间");
+            dlg.Commands.Add(new UICommand("ok"));
             await dlg.ShowAsync();
         }
     }

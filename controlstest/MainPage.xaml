@@ -57,7 +57,7 @@
                         </StackPanel>
                         <StackPanel>
                             <TextBlock Text="切换开关:"/>
-                            <ToggleSwitch Tapped="ToggleSwitch_Tapped">
+                            <ToggleSwitch Toggled="ToggleSwitch_Toggled">
                                 <ToggleSwitch.OnContent>
                                     <TextBlock Text="打开状态" Foreground="AliceBlue"/>
                                 </ToggleSwitch.OnContent>
@@ -65,6 +65,11 @@
                                     <TextBlock Text="关闭了！" Foreground="Red"/>
                                 </ToggleSwitch.OffContent>
                             </ToggleSwitch>
+                            
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="时间选择器："/>
+                            <TimePicker ClockIdentifier="12HourClock" TimeChanged="TimePicker_TimeChanged"/>
                         </StackPanel>
                     </StackPanel>
                 </Grid>
