@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    
     <SplitView Name="mainview" DisplayMode="CompactOverlay" CompactPaneLength="70" OpenPaneLength="150">
         <SplitView.Content>
             <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -18,60 +19,9 @@
                    Margin="20"
                    />
                 <Grid Grid.Row="1">
-                    <StackPanel Orientation="Vertical">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="复选框:" VerticalAlignment="Center"/>
-                            <CheckBox Content="选项1" Tapped="CheckBox_Tapped" />
-                            <CheckBox Content="选项2" Tapped="CheckBox_Tapped"/>
-                            <TextBlock Name="viewtext" Text="显示"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="单选框:" VerticalAlignment="Center"/>
-                            <RadioButton Content="选项1"
-                                 GroupName="radios"
-                                 Checked="RadioButton_Checked"/>
-                            <RadioButton Content="选项2"
-                                 GroupName="radios"
-                                 Checked="RadioButton_Checked"/>
-                            <TextBlock Name="rviewtext" Text="单选框显示"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="组合框:"/>
-                            <ComboBox SelectionChanged="ComboBox_SelectionChanged">
-                                <ComboBoxItem Content="hello" IsSelected="True"/>
-                                <ComboBoxItem Content="world"/>
-                                <ComboBoxItem Content="测试" />
-                            </ComboBox>
-                            <TextBlock Margin="20,0,0,0" Text="组合框显示" Name="cboxview"/>
+                    <Frame Name="pageframe">
 
-
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="二级按钮:" VerticalAlignment="Center"/>
-                            <ToggleButton Content="测试按钮" Click="ToggleButton_Click" IsChecked="True"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="三级按钮:" VerticalAlignment="Center"/>
-                            <ToggleButton Content="测试按钮" Click="ToggleButton_Click_1" IsThreeState="True" IsChecked="False"/>
-                            <TextBlock Text="三级按钮状态" Name="threeview"/>
-                        </StackPanel>
-                        <StackPanel>
-                            <TextBlock Text="切换开关:"/>
-                            <ToggleSwitch Toggled="ToggleSwitch_Toggled">
-                                <ToggleSwitch.OnContent>
-                                    <TextBlock Text="打开状态" Foreground="AliceBlue"/>
-                                </ToggleSwitch.OnContent>
-                                <ToggleSwitch.OffContent>
-                                    <TextBlock Text="关闭了！" Foreground="Red"/>
-                                </ToggleSwitch.OffContent>
-                            </ToggleSwitch>
-                            
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="时间选择器："/>
-                            <TimePicker ClockIdentifier="12HourClock" TimeChanged="TimePicker_TimeChanged"/>
-                        </StackPanel>
-                    </StackPanel>
+                    </Frame>
                 </Grid>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
@@ -80,7 +30,7 @@
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
                     <Button Content="后退" HorizontalAlignment="Center"/>
-                    <Button Content="前进" Grid.Column="1" HorizontalAlignment="Center"/>
+                    <Button Content="前进" Grid.Column="1" HorizontalAlignment="Center" Click="Button_Click_2"/>
                     <Button Content="退出" Grid.Column="2" HorizontalAlignment="Center" Click="Button_Click"/>
 
                 </Grid>
