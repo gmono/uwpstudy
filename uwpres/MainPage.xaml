@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="uwpres.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:uwpres"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml"/>
+                <ResourceDictionary Source="Dictionary2.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <TextBlock Text="hello world" FontSize="30" Foreground="{StaticResource mybrush}" />
+            <TextBlock Text="{StaticResource mytext}" FontSize="30"/>
+            <Button Content="测试一下" Style="{StaticResource mybutton_style}"/>
+            <Button Content="测试一下2" Style="{StaticResource mybutton_style}"/>
+            <Button Content="测试一下3" Style="{StaticResource mybutton_style}"/>
+            <Button Content="跳到testpage" Style="{StaticResource gotobtn}" Click="Button_Click"/>
+            <TextBlock Text="{StaticResource hello}" FontSize="36"/>
+        </StackPanel>
+    </Grid>
+</Page>

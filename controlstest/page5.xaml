@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="controlstest.page5"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:controlstest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="图形测试" FontSize="30" Margin="20" TextAlignment="Center"/>
+        <Line X1="0" X2="200" Y1="100" Y2="100" Stroke="OrangeRed" StrokeThickness="7" StrokeEndLineCap="Triangle"/>
+        <Canvas Grid.Row="1">
+            <Polyline Canvas.Left="50" Canvas.Top="50" Points="0,100 100,0 100,100 0,100" Stroke="Red" StrokeLineJoin="Round" StrokeThickness="5" Fill="Beige" Tapped="Polyline_Tapped"/>
+        </Canvas>
+    </Grid>
+</Page>

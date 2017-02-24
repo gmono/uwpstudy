@@ -6,24 +6,25 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
+
     <SplitView Name="mainview" DisplayMode="CompactOverlay" CompactPaneLength="30" OpenPaneLength="150">
         <SplitView.Content>
             <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="13.322"/>
+                    <RowDefinition Height="74.561"/>
                     <RowDefinition Height="3*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
                 <TextBlock Text="常用控件测试" FontSize="36"
-                   Margin="20"
+                   Margin="20,6.678,20,19.883" Grid.Row="1"
                    />
-                <Grid Grid.Row="1">
+                <Grid Grid.Row="2" Margin="0,0.117,0,137.883" Grid.RowSpan="2">
                     <Frame Name="pageframe">
 
                     </Frame>
                 </Grid>
-                <Grid Grid.Row="2">
+                <Grid Grid.Row="3" Margin="0,0.117,0,-0.117">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="1*"/>
@@ -34,7 +35,7 @@
                     <Button Content="退出" Grid.Column="2" HorizontalAlignment="Center" Click="Button_Click"/>
 
                 </Grid>
-                
+
             </Grid>
         </SplitView.Content>
         <SplitView.Pane>
@@ -44,10 +45,11 @@
                     <ListBoxItem Content="测试菜单项1" IsSelected="True" HorizontalAlignment="Center"/>
                     <ListBoxItem Content="测试菜单项2" HorizontalAlignment="Center"/>
                     <ListBoxItem Content="测试菜单项3" HorizontalAlignment="Center"/>
+                    <ListBoxItem Content="页4" HorizontalAlignment="Center"/>
                 </ListBox>
                 <HyperlinkButton NavigateUri="http://973544732.qzone.qq.com" HorizontalAlignment="Center" Content="月落的空间"/>
             </StackPanel>
         </SplitView.Pane>
     </SplitView>
-    
+
 </Page>

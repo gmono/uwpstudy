@@ -35,7 +35,7 @@ namespace controlstest
         {
             App.Current.Exit();
         }
-        private Type[] pages = new Type[] { typeof(page2), typeof(page3),typeof(page4) };
+        private Type[] pages = new Type[] { typeof(page2), typeof(page3),typeof(page4),typeof(page5) };
         private async void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListBox box = sender as ListBox;
