@@ -8,11 +8,67 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel Orientation="Vertical">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="日期显示"/>
-                <CalendarView SelectionMode="Multiple" SelectedDatesChanged="CalendarView_SelectedDatesChanged"/>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="日期显示"/>
+                    <CalendarView SelectionMode="Multiple" SelectedDatesChanged="CalendarView_SelectedDatesChanged"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Flyout测试" />
+                    <Button Content="Flyout" Margin="50,20,20,0">
+                        <Button.Flyout>
+                            <Flyout x:Name="myflyout">
+                                <StackPanel>
+                                    <TextBlock Text="this is a flyout to say hello world"/>
+                                    <Button Name="iflyoutbtn" Content="确定" Click="iflyoutbtn_Click"/>
+                                </StackPanel>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                    <Button Content="Flyout Menu" Margin="50,20,20,0">
+                        <Button.Flyout>
+                            <MenuFlyout Placement="Bottom">
+                                <MenuFlyoutItem Text="Item 1"/>
+                                <MenuFlyoutItem Text="Item 2"/>
+                                <MenuFlyoutSeparator />
+                                <MenuFlyoutSubItem Text="subitem">
+                                    <MenuFlyoutItem Text="test 1"/>
+                                    <MenuFlyoutItem Text="test 2"/>
+                                    <MenuFlyoutSubItem Text="sub2">
+                                        <MenuFlyoutItem Text="text"/>
+                                    </MenuFlyoutSubItem>
+                                </MenuFlyoutSubItem>
+                                <MenuFlyoutSeparator/>
+                                <ToggleMenuFlyoutItem Text="Item xx"/>
+                            </MenuFlyout>
+                        </Button.Flyout>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="autosuggestbox测试:"/>
+                    <AutoSuggestBox Name="myautosb"
+                                    Margin="20,0,0,20"
+                                    QueryIcon="Find"
+                                    HorizontalAlignment="Left"
+                                    PlaceholderText="空白占位"
+                                    Width="200"
+                                    TextChanged="myautosb_TextChanged"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="slider测试:" />
+                    <Slider Name="myslider"
+                            Margin="10"
+                            HorizontalAlignment="Left"
+                            Maximum="100"
+                            Minimum="0"
+                            Width="300"
+                            />
+                </StackPanel>
+                
+
             </StackPanel>
-        </StackPanel>
+        </ScrollViewer>
+
     </Grid>
 </Page>

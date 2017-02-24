@@ -25,7 +25,6 @@ namespace controlstest
         public MainPage()
         {
             this.InitializeComponent();
-            pageframe.Navigate(typeof(page2));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -36,6 +35,7 @@ namespace controlstest
         {
             App.Current.Exit();
         }
+        private Type[] pages = new Type[] { typeof(page2), typeof(page3),typeof(page4) };
         private async void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListBox box = sender as ListBox;
@@ -43,14 +43,37 @@ namespace controlstest
             string text = item.Content as string;
             //弹出对话框
             MessageDialog dlg = new MessageDialog(text, "提示!");
-            UICommand cmd = new UICommand("确定");
+            UICommand cmd = new UICommand("确定并跳转到页"+box.SelectedIndex+1);
             dlg.Commands.Add(cmd);
             await dlg.ShowAsync();
+            //跳转
+            try
+            {
+                Type pageptype = pages[box.SelectedIndex];
+                pageframe.Navigate(pageptype);
+            }
+            catch(IndexOutOfRangeException)
+            {
+                MessageDialog edlg = new MessageDialog("页索引超界", "提示");
+                edlg.Commands.Add(new UICommand("确定"));
+                await edlg.ShowAsync();
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            pageframe.Navigate(typeof(page3));
+            if(pageframe.CanGoForward)
+            {
+                pageframe.GoForward();
+            }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if(pageframe.CanGoBack)
+            {
+                pageframe.GoBack();
+            }
         }
     }
 }

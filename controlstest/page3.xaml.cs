@@ -38,5 +38,17 @@ namespace controlstest
             dlg.Commands.Add(new UICommand("OK"));
             await dlg.ShowAsync();
         }
+
+        private void iflyoutbtn_Click(object sender, RoutedEventArgs e)
+        {
+            myflyout.Hide();
+        }
+        private string[] SelectionItems = new string[] { "test1", "test2", "test3", "test" };
+        private void myautosb_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            var filtered = SelectionItems.Where(p => p.StartsWith(sender.Text)).ToArray();
+            
+            sender.ItemsSource = filtered;
+        }
     }
 }
