@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="dingcan.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:dingcan"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <!--<VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState>
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowWidth="600" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Target="mainview.DisplayMode" Value="CompactOverlay"/>
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>-->
+
+        <SplitView Name="mainview" DisplayMode="CompactOverlay" CompactPaneLength="70" OpenPaneLength="250">
+        <SplitView.Content>
+            <Frame Name="mainframe"></Frame>
+        </SplitView.Content>
+        <SplitView.Pane>
+            <StackPanel Orientation="Vertical">
+                <Button FontFamily="Segoe MDL2 Assets" Content="&#xE175;" FontSize="50" Click="Button_Click_4"/>
+                <ListBox Margin="0,20,0,0" SelectionChanged="ListBox_SelectionChanged">
+                    <ListBoxItem>
+                        <Grid Width="250">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontSize="50" FontFamily="Segoe MDL2 Assets" Text="&#xe1cb;" VerticalAlignment="Center"/>
+                            <TextBlock FontSize="30" Text="订餐" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                        
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <Grid Width="250" Height="50">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontSize="50" FontFamily="Segoe MDL2 Assets" Text="&#xe1da;" VerticalAlignment="Center"/>
+                            <TextBlock FontSize="30" Text="查看订单" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+
+                    </ListBoxItem>
+                </ListBox>
+            </StackPanel>
+        </SplitView.Pane>
+    </SplitView>
+    
+</Page>

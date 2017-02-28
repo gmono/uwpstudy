@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "english_study", "english_st
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uwpres", "uwpres\uwpres.csproj", "{1790A769-F012-4C28-B407-D3D0FF094092}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dingcan", "dingcan\dingcan.csproj", "{50C4D309-808E-4AFB-AC77-500C552CC082}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -153,6 +155,24 @@ Global
 		{1790A769-F012-4C28-B407-D3D0FF094092}.Release|x86.ActiveCfg = Release|x86
 		{1790A769-F012-4C28-B407-D3D0FF094092}.Release|x86.Build.0 = Release|x86
 		{1790A769-F012-4C28-B407-D3D0FF094092}.Release|x86.Deploy.0 = Release|x86
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Debug|ARM.ActiveCfg = Debug|ARM
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Debug|ARM.Build.0 = Debug|ARM
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Debug|ARM.Deploy.0 = Debug|ARM
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Debug|x64.ActiveCfg = Debug|x64
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Debug|x64.Build.0 = Debug|x64
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Debug|x64.Deploy.0 = Debug|x64
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Debug|x86.ActiveCfg = Debug|x86
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Debug|x86.Build.0 = Debug|x86
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Debug|x86.Deploy.0 = Debug|x86
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Release|ARM.ActiveCfg = Release|ARM
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Release|ARM.Build.0 = Release|ARM
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Release|ARM.Deploy.0 = Release|ARM
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Release|x64.ActiveCfg = Release|x64
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Release|x64.Build.0 = Release|x64
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Release|x64.Deploy.0 = Release|x64
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Release|x86.ActiveCfg = Release|x86
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Release|x86.Build.0 = Release|x86
+		{50C4D309-808E-4AFB-AC77-500C552CC082}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
